@@ -1,0 +1,283 @@
+#pricing {
+    margin-bottom: 30rem;
+
+    & .signature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        margin-top: 5rem;
+
+        font-family: var(--title-sm);
+        font-size: 1.5rem;
+        color: var(--text-title);
+    }
+
+    & .prices {
+        padding-block: 10rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+    
+        & figure {
+            display: grid;
+            padding: 2rem 1.75rem;
+            height: 35rem;
+            border-radius: 1.5rem;
+
+            background-color: var(--shape-stroke);
+
+            & sub {
+                font-family: var(--title-xs);
+                font-size: 1.25rem;
+            }
+
+            & .sub-month {
+                color: var(--blue-light);
+            }
+
+            & .sub-semi {
+                color: var(--pink-light);
+            }
+
+            & .sub-annual {
+                color: var(--blue-light);
+            }
+
+            & span {
+                font-family: var(--title-sm);
+                color: var(--text-title);
+
+                height: auto;
+                & strong {
+                    font-size: 2rem;
+                }
+            }
+
+            & p {
+                font-family: var(--text-md);
+                color: var(--text-label);
+
+                height: auto;
+            }
+
+            & ul {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+            }
+
+            & .lista {
+                display: grid;
+                height: 10rem;
+                margin-top: 5rem;
+            }
+        }
+
+        & .monthly {
+            background-color: var(--shape-base);
+            border: solid 1px var(--shape-stroke);
+
+            position: absolute;
+            z-index: 2;
+
+            transform: translate(-380px, 80px) rotate(-15deg);
+            animation:  outmonth 600ms ease both;
+
+            & .title-month {
+                display: grid;
+                margin-bottom: 0.9rem;
+            }
+        }
+
+      
+ 
+        & .semi-annual {
+            background-color: var(--shape-base);
+            border: solid 1px var(--shape-stroke);
+
+            position: relative;
+            z-index: 3;
+
+
+            & .title-semi {
+                display: grid;
+                margin-bottom: 0.9rem;
+            }
+        }
+
+        & .annual {
+            background-color: var(--shape-base);
+            border: solid 1px var(--shape-stroke);
+
+            position: absolute;
+            z-index: 1;
+
+            
+            transform: translate(380px, 80px) rotate(15deg);
+            animation:  outmonth 600ms ease both;
+
+            & .title-annual {
+                display: grid;
+                margin-bottom: 0.9rem;
+            }
+        }
+        
+        /* Botão Mensal */
+
+        & .button-monthly {
+            padding: .1rem 1rem;
+            background-color: var(--blue-dark);
+            border-radius: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            overflow: hidden;
+    
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            z-index: 0;
+            
+            & p {
+                font-family: var(--button);
+                color: var(--text-title);
+                text-align: center;
+            }
+        }
+
+        .button-monthly::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+    
+            width: 7rem;
+            height: 7rem;
+    
+            background: var(--blue-base);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 700ms ease-out;
+            z-index: -1;   
+        }
+
+        .button-monthly:hover::before {
+            transform: translate(-50%, -50%) scale(3);
+        }
+      
+        /* Botão Semestral */
+
+        & .button-semi {
+            padding: .1rem 1rem;
+            background-color: var(--pink-dark);
+            border-radius: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            overflow: hidden;
+    
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            z-index: 0;
+            
+            & p {
+                font-family: var(--button);
+                color: var(--text-title);
+            }
+        }
+
+        .button-semi::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+    
+            width: 7rem;
+            height: 7rem;
+    
+            background: var(--pink-base);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 700ms ease-out;
+            z-index: -1;   
+        }
+
+        .button-semi:hover::before {
+            transform: translate(-50%, -50%) scale(3);
+        }
+        
+        /* Botão Anual */
+
+        & .button-annual {
+            padding: .1rem 1rem;
+            background-color: var(--blue-dark);
+            border-radius: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            overflow: hidden;
+    
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            z-index: 0;
+            
+            & p {
+                font-family: var(--button);
+                color: var(--text-title);
+                text-align: center;
+            }
+        }
+
+        .button-annual::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+    
+            width: 7rem;
+            height: 7rem;
+    
+            background: var(--blue-base);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 700ms ease-out;
+            z-index: -1;   
+        }
+
+        .button-annual:hover::before {
+            transform: translate(-50%, -50%) scale(3);
+        }
+
+    }
+
+    & .monthly:hover {
+        background-color: var(--shape-stroke);
+    }
+
+    & .annual:hover {
+        background-color: var(--shape-stroke);
+    }
+
+    & .semi-annual:hover {
+        background-color: var(--shape-stroke);
+    }
+}
+
+@keyframes outmonth {
+    0% {
+        transform: translate(0);
+    }
+}

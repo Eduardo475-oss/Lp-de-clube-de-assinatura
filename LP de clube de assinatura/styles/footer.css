@@ -1,0 +1,68 @@
+footer {
+  background-image: url(../assets/livro-2.svg);
+  background-size: cover;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & .box-1 {
+    display: grid;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    align-items: center;
+    gap: 1.5rem;
+
+    & .box-12 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.875rem;
+    }
+  }
+
+  & .box-2 {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+
+    & .lista-1 {
+        display: grid;
+        gap: 1rem;
+
+        & span {
+            font-family: var(--title-xs);
+            color: var(--text-body);
+        }
+
+        & a {
+            font-family: var(--link);
+            color: var(--blue-light);
+        }
+    }
+    
+    & .lista-2 {
+        display: grid;
+        gap: 0.875rem;
+
+        & span {
+            font-family: var(--title-xs);
+            color: var(--text-body);
+        }
+
+      }
+      
+      & a {
+          font-family: var(--link);
+          color: var(--blue-light);
+      }
+    & a:hover {
+      color: var(--text-body);
+    }
+  }
+
+  & .border {
+    border: solid 1px var(--shape-stroke);
+  }
+}

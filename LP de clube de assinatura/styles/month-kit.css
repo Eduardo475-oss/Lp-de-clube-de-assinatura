@@ -1,0 +1,413 @@
+#monthly-kit {
+    margin-top: 14.6875rem;
+
+    & div:nth-child(1) {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & h3 {
+            font-size: 2rem;
+            font-family: var(--title-lg);
+            color: var(--text-title);
+
+            text-align: center;
+        }
+    }
+
+    & span {
+        margin-bottom: 4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 0.90rem;
+        font-family: var(--text-md);
+        color: var(--text-body);
+    }
+
+
+    & .livro-colina {
+        padding-block: 8.375rem 10.5625rem;
+
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+
+        & img[src*="Image"] {
+            position: relative;
+            /* opacity: 0; */
+            z-index: 2;
+        }
+
+        & .livro-wrapp {
+            position: absolute;
+            z-index: 1;
+            display: grid;
+            align-items: center;
+            margin-left: 31rem;
+
+
+            grid-template-columns: 1fr 1fr;
+
+
+            & .text-wrapp {
+                display: grid;
+                margin-left: 7rem;
+                gap: 16rem;
+                & div:nth-child(1) {
+                    display: grid;
+
+                    & .book {
+                        width: 10rem;
+                        height: auto;
+                        margin-bottom: 0.5rem;
+                        text-align: left;
+                        font-size: 0.75rem;
+                        font-family: var(--text-md);
+                        color: var(--text-body);
+                    }
+
+                    & img {
+                        width: 5rem;
+                }
+            }
+                & div:nth-child(2) {
+                    display: grid;
+                    gap: 0.25rem;
+                    & .broche {
+                        width: 10rem;
+                        height: auto;
+                        text-align: left;
+                        font-size: 0.75rem;
+                        font-family: var(--text-md);
+                        color: var(--text-body);
+                    }
+
+                    & img[src*="arrow-up"] {
+                        width: 3rem;
+                        /* margin-bottom: 0.5rem; */
+                    }
+
+                    & img[src*="pin"] {
+                        width: 10rem;
+                        height: auto;
+                    }
+                }
+        }
+            & img[src*="cartao"] {
+                width: 10.75rem;
+                height: auto;
+            }
+
+        & .cartoes {
+            position: relative;
+
+            & .cartao {
+                position: relative;
+                /* opacity: 0; */
+                z-index: 2;
+            }
+            
+            & .cartao-roxo {
+                position: absolute;
+                display: flex;
+                top: 0;
+                z-index: 1;
+
+            }
+
+            & .text-3 {
+                position: absolute;
+                display: grid;
+                align-items: center;
+                bottom: 0;
+
+                & p {
+                    font-family: var(--text-md);
+                    color: var(--text-title);
+                }
+            }
+        }
+    }
+}
+
+    /* Animações de entrada */
+
+    .livro-colina:hover .book {
+        animation: inleftup 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover #arrow1 {
+        animation: inleftupa 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover .broche {
+        animation: inleftdown 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover img[src*="arrow-up-2"] {
+        animation: inleftdownb 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover img[src*="pin"] {
+        animation: inleftdownc 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover .cartao {
+        animation: inrightyellow 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover .cartao-roxo {
+        animation: inrightpurple 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover .seta-baixo {
+        animation: inrightarrow 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:hover .texto-3 {
+        animation: texto3 500ms ease-in-out forwards;
+    }
+
+    /* Animação de saída */
+
+    .livro-colina:not(:hover) .book {
+        animation: outleftup 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) #arrow1 {
+        animation: outleftupa 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) .broche {
+        animation: outleftdown 500ms ease-in-out forwards;
+    }
+    
+    .livro-colina:not(:hover) img[src*="arrow-up-2"] {
+        animation: outleftdownb 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) img[src*="pin"] {
+        animation: outleftdownc 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) .cartao {
+        animation: outrightyellow 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) .cartao-roxo {
+        animation: outrightpurple 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) .seta-baixo {
+        animation: outrightarrow 500ms ease-in-out forwards;
+    }
+
+    .livro-colina:not(:hover) .texto-3 {
+        animation: outtexto3 500ms ease-in-out forwards;
+    }
+}
+    /* Keyframes de entrada */
+
+@keyframes inleftup {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-170px, -70px);
+        scale: 1.5;
+    }
+}
+
+@keyframes inleftupa {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-80px, -40px);
+        scale: 2;
+    }
+}
+
+@keyframes inleftdown {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-210px, 30px);
+        scale: 1.5;
+    }
+}
+
+@keyframes inleftdownb {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-150px, 50px);
+        scale: 2;
+    }
+}
+
+@keyframes inleftdownc {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-120px, 60px);
+        scale: 2;
+    }
+}
+
+@keyframes inrightyellow {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(200px, -150px) rotate(15deg);
+    }
+}
+
+@keyframes inrightpurple {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(300px, -50px) rotate(25deg);
+    }
+}
+
+@keyframes inrightarrow {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(250px, 100px);
+    }
+}
+
+@keyframes texto3 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(170px, 110px);
+    }
+}
+
+    /* Keyframes de saída */
+
+    @keyframes outleftup {
+        0% {
+            transform: translate(-170px, -70px);
+            scale: 1.5;
+        }
+    
+        100% {
+            transform: translate(0);
+            scale: 1;
+        }
+    }
+
+    @keyframes outleftupa {
+        0% {
+            transform: translate(-80px, -40px);
+            scale: 2;
+        }
+    
+        100% {
+            transform: translate(0);
+            scale: 1;
+        }
+    }
+
+    @keyframes outleftdown {
+        0% {
+            transform: translate(-210px, 30px);
+            scale: 1.5;
+        }
+    
+        100% {
+            transform: translate(0);
+            scale: 1;
+        }
+    }
+
+    @keyframes outleftdownb {
+        0% {
+            transform: translate(-150px, 50px);
+            scale: 2;
+        }
+    
+        100% {
+            transform: translate(0);
+            scale: 1;
+        }
+    }
+
+    @keyframes outleftdownc {
+        0% {
+            transform: translate(-120px, 60px);
+            scale: 2;
+        }
+    
+        100% {
+            transform: translate(0);
+            scale: 1;
+        }
+    }
+    
+    @keyframes outrightyellow {
+        0% {
+            transform: translate(200px, -150px) rotate(15deg);
+        }
+    
+        100% {
+            transform: translate(0) rotate(0);
+        }
+    }
+
+    @keyframes outrightpurple {
+        0% {
+            transform: translate(300px, -50px) rotate(25deg);
+        }
+    
+        100% {
+            transform: translate(0) rotate(0);
+        }
+    }
+
+    @keyframes outrightarrow {
+        0% {
+            transform: translate(250px, 100px);
+        }
+    
+        100% {
+            transform: translate(0);
+        }
+    }
+
+    @keyframes outtexto3 {
+        0% {
+            transform: translate(170px, 110px);
+        }
+    
+        100% {
+            transform: translate(0);
+        }
+    }

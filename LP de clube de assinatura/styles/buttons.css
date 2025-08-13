@@ -1,0 +1,19 @@
+
+.button-popular {
+    border: none;
+    border-radius: .5rem;
+    font: var(--button);
+    color: var(--text-title);
+    padding: 0.75rem 3.25rem;
+    background-color: var(--pink-dark);
+}
+
+.buttons {
+    border: none;
+    border-radius: .5rem;
+    font: var(--button);
+    color: var(--text-title);
+    padding: 0.75rem 3.25rem;
+    background-color: var(--blue-dark);
+}
+
