@@ -1,0 +1,1 @@
+# Lp-de-clube-de-assinatura
